@@ -1,16 +1,19 @@
 function removeElement(nums: number[], val: number): number {
     let r = nums.length
-    console.log(r)
-    while (r > 0) {
+    let i = 0
 
+    while (i < r) {
+        if (val == nums[i]) {
+            nums[i] = nums[r - 1]
+            r -= 1
 
-        if (val == nums[r - 1]) {
-            let element = nums.splice(r - 1, 1)
+        } else {
+            i += 1
         }
-        r -= 1
+
     }
 
 
-    return nums.length
+    return i
 };
 
